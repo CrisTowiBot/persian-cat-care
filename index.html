@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Richard — El Gato Persa de la Casa</title>
-  <meta name="description" content="Guía interactiva con tips, juegos y cuidados para Richard, el gato persa de la casa. Hecho con amor por Sepbesh." />
+  <title>El Buen Richard — El Gato Persa de la Casa</title>
+  <meta name="description" content="Guía interactiva con tips, juegos y cuidados para El Buen Richard, el gato persa de la casa. Hecho con amor por Sepbesh." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
@@ -286,6 +286,9 @@
       overflow: hidden;
       border: 4px solid var(--charcoal);
       box-shadow: inset 0 0 30px rgba(58,58,58,0.18), 0 12px 30px rgba(58,58,58,0.12);
+      cursor: pointer;
+      touch-action: none;
+      -webkit-tap-highlight-color: transparent;
     }
     .play-area::before {
       content: '';
@@ -573,7 +576,26 @@
       .hero-cat { order: -1; }
       .hero-cat svg { max-width: 320px; }
       .section { padding: 4rem 1.2rem; }
-      .play-area { height: 300px; }
+      .play-area { height: 320px; }
+      .sticky-nav {
+        gap: 0.6rem;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+      }
+      .sticky-nav a { padding: 0.3rem 0.7rem; }
+      .cta { padding: 0.8rem 1.5rem; font-size: 0.95rem; }
+      .card { padding: 1.5rem 1.2rem; }
+      .tip { padding: 1.2rem; }
+      .minigame { padding: 2rem 1.2rem; }
+      .big-cat { width: 220px; height: 220px; }
+    }
+
+    /* Smaller phones */
+    @media (max-width: 420px) {
+      .hero { padding: 2rem 1rem; }
+      .play-area { height: 280px; }
+      .feather { width: 44px; height: 44px; }
+      .mini-cat { width: 64px; height: 64px; }
     }
   </style>
 </head>
@@ -585,9 +607,9 @@
   <!-- ─── Hero ─── -->
   <header class="hero">
     <div class="hero-text">
-      <h1><span>Richard</span></h1>
-      <p>El gato persa de la casa. Tu guía interactiva para cuidarlo, jugar con él y entender por qué duerme 18 horas al día. Spoiler: porque es Richard.</p>
-      <a href="#cuidados" class="cta">Cuidar a Richard 🐾</a>
+      <h1>El Buen <span>Richard</span></h1>
+      <p>El persa más floofy de CDMX. Tu guía interactiva para cuidarlo, jugar con él y entender por qué duerme 18 horas al día. Spoiler: porque es El Buen Richard.</p>
+      <a href="#cuidados" class="cta">Cuidar al Buen Richard 🐾</a>
     </div>
     <div class="hero-cat">
       <!-- Persian cat SVG — animated via CSS, eyes follow cursor via JS -->
@@ -689,7 +711,7 @@
   <!-- ─── Cuidados ─── -->
   <section id="cuidados" class="section">
     <h2><span class="emoji">🩺</span> Cuidados Esenciales</h2>
-    <p class="lead">Richard es un gato de alto mantenimiento. Ese pelaje no se mantiene solo. Aquí lo que tienes que tener en el radar cada día para que se vea tan regia como él se siente.</p>
+    <p class="lead">El Buen Richard es un gato de alto mantenimiento. Ese pelaje no se mantiene solo. Aquí lo que tienes que tener en el radar cada día para que se vea tan regia como él se siente.</p>
 
     <div class="cards">
       <article class="card" data-color="copper">
@@ -745,10 +767,10 @@
   <!-- ─── Juego ─── -->
   <section id="juego" class="section">
     <h2><span class="emoji">🪶</span> Hora de Jugar</h2>
-    <p class="lead">Richard no es atleta. Es más bien contemplativo. Pero necesita juego diario para no engordar y no deprimirse. Arrastra la pluma y mira cómo finge que no le interesa (le encanta).</p>
+    <p class="lead">El Buen Richard no es atleta. Es más bien contemplativo. Pero necesita juego diario para no engordar y no deprimirse. Toca o arrastra la pluma y mira cómo finge que no le interesa (le encanta).</p>
 
     <div class="play-area" id="playArea">
-      <div class="play-hint">🪶 Arrastra la pluma por la alfombra</div>
+      <div class="play-hint">🪶 Toca o arrastra la pluma</div>
       <div class="mini-cat" id="miniCat">
         <svg viewBox="0 0 100 100">
           <ellipse cx="50" cy="65" rx="35" ry="22" fill="#c9cdd3" />
@@ -812,7 +834,7 @@
   <!-- ─── Tips ─── -->
   <section id="tips" class="section">
     <h2><span class="emoji">✨</span> Tips Curiosos</h2>
-    <p class="lead">Cosas que probablemente no sabías sobre estos peluditos aristocráticos (y que aplican 100% a Richard).</p>
+    <p class="lead">Cosas que probablemente no sabías sobre estos peluditos aristocráticos (y que aplican 100% a El Buen Richard).</p>
 
     <div class="tips-grid" id="tipsGrid">
       <div class="tip">
@@ -860,8 +882,8 @@
 
   <!-- ─── Minigame ─── -->
   <section id="minijuego" class="section">
-    <h2><span class="emoji">💕</span> Acaricia a Richard</h2>
-    <p class="lead">Click. Click. Click. Sube de nivel. Tu progreso se guarda en este navegador. Richard ronronea más fuerte con cada nivel que subes.</p>
+    <h2><span class="emoji">💕</span> Acaricia a El Buen Richard</h2>
+    <p class="lead">Toca. Toca. Toca. Sube de nivel. Tu progreso se guarda en este navegador. El Buen Richard ronronea más fuerte con cada nivel que subes.</p>
 
     <div class="minigame">
       <div class="big-cat" id="bigCat">
@@ -907,8 +929,8 @@
   </section>
 
   <footer>
-    <p>Hecho con ❤️ por <a href="https://github.com/CrisTowiBot" target="_blank" rel="noopener">Sepbesh</a> para Christian y Richard, el persa más floofy de CDMX</p>
-    <p>Inspirado en Richard 🐱 (el gato de la casa) y todos los gatos que ronronean en la sala</p>
+    <p>Hecho con ❤️ por <a href="https://github.com/CrisTowiBot" target="_blank" rel="noopener">Sepbesh</a> para Christian y El Buen Richard, el persa más floofy de CDMX</p>
+    <p>Inspirado en El Buen Richard 🐱 (el gato de la casa) y todos los gatos que ronronean en la sala</p>
   </footer>
 
   <script>
@@ -1011,7 +1033,7 @@
       }, 50);
     });
 
-    // ─── Play area: drag feather → cat follows ───
+    // ─── Play area: tap anywhere OR drag feather → cat plays ───
     (function () {
       const feather = document.getElementById('feather');
       const cat = document.getElementById('miniCat');
@@ -1019,53 +1041,117 @@
       if (!feather || !cat || !area) return;
 
       let isDragging = false;
-      let offsetX = 0, offsetY = 0;
+      let didDrag = false;
+      let offsetX = 25, offsetY = 25;  // default = center on tap point
+      let dragStart = null;
 
+      function areaRect() { return area.getBoundingClientRect(); }
+
+      function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
+
+      function moveCatTo(featherX, featherY) {
+        const r = areaRect();
+        const catX = clamp(featherX - 30, 0, r.width - 80);
+        const catY = clamp(featherY - 20, 0, r.height - 80);
+        cat.style.left = catX + 'px';
+        cat.style.bottom = (r.height - catY - 80) + 'px';
+      }
+
+      function placeFeatherAt(clientX, clientY) {
+        const r = areaRect();
+        const fx = clamp(clientX - r.left - 25, 0, r.width - 50);
+        const fy = clamp(clientY - r.top - 25, 0, r.height - 50);
+        feather.style.left = fx + 'px';
+        feather.style.top = fy + 'px';
+        return { x: fx, y: fy };
+      }
+
+      function triggerPounce() {
+        cat.classList.add('pounce');
+        showPurr(cat);
+        setTimeout(() => cat.classList.remove('pounce'), 500);
+      }
+
+      // ── Drag (works on both mouse and touch via pointer events) ──
       feather.addEventListener('pointerdown', (e) => {
         isDragging = true;
-        feather.setPointerCapture(e.pointerId);
+        didDrag = false;
+        dragStart = { x: e.clientX, y: e.clientY };
+        try { feather.setPointerCapture(e.pointerId); } catch (_) {}
         const rect = feather.getBoundingClientRect();
-        offsetX = e.clientX - rect.left;
-        offsetY = e.clientY - rect.top;
-        feather.style.cursor = 'grabbing';
+        const r = areaRect();
+        offsetX = e.clientX - (rect.left - r.left);
+        offsetY = e.clientY - (rect.top - r.top);
         feather.style.zIndex = 10;
+        e.stopPropagation();
       });
 
       feather.addEventListener('pointermove', (e) => {
         if (!isDragging) return;
-        const areaRect = area.getBoundingClientRect();
-        let x = e.clientX - areaRect.left - offsetX;
-        let y = e.clientY - areaRect.top - offsetY;
-        x = Math.max(0, Math.min(areaRect.width - 50, x));
-        y = Math.max(0, Math.min(areaRect.height - 50, y));
-        feather.style.left = x + 'px';
-        feather.style.top = y + 'px';
-        // Cat moves toward feather
-        const catTargetX = Math.max(0, Math.min(areaRect.width - 80, x - 30));
-        const catTargetY = Math.max(0, Math.min(areaRect.height - 80, y - 20));
-        cat.style.left = catTargetX + 'px';
-        cat.style.bottom = (areaRect.height - catTargetY - 80) + 'px';
+        if (dragStart) {
+          const dist = Math.hypot(e.clientX - dragStart.x, e.clientY - dragStart.y);
+          if (dist > 6) didDrag = true;
+        }
+        const r = areaRect();
+        const fx = clamp(e.clientX - r.left - offsetX, 0, r.width - 50);
+        const fy = clamp(e.clientY - r.top - offsetY, 0, r.height - 50);
+        feather.style.left = fx + 'px';
+        feather.style.top = fy + 'px';
+        moveCatTo(fx, fy);
       });
 
       feather.addEventListener('pointerup', (e) => {
         if (!isDragging) return;
         isDragging = false;
-        feather.style.cursor = 'grab';
         feather.style.zIndex = 5;
-        // Pounce + purr text
-        cat.classList.add('pounce');
-        showPurr(cat);
-        setTimeout(() => cat.classList.remove('pounce'), 500);
+        // If user tapped (didn't drag), make sure the cat still runs to the feather
+        if (!didDrag) {
+          const fx = parseFloat(feather.style.left) || 0;
+          const fy = parseFloat(feather.style.top) || 0;
+          moveCatTo(fx, fy);
+        }
+        triggerPounce();
       });
+
+      feather.addEventListener('pointercancel', () => {
+        isDragging = false;
+        feather.style.zIndex = 5;
+      });
+
+      // ── Tap anywhere in the play area (mobile-friendly) ──
+      // Tapping empty space teleports the feather there and the cat chases it.
+      let areaTouch = null;
+
+      area.addEventListener('pointerdown', (e) => {
+        if (e.target === feather) return;  // handled by feather handler
+        areaTouch = { x: e.clientX, y: e.clientY, t: Date.now() };
+      });
+
+      area.addEventListener('pointerup', (e) => {
+        if (!areaTouch) return;
+        if (e.target === feather) { areaTouch = null; return; }
+        const dt = Date.now() - areaTouch.t;
+        const dist = Math.hypot(e.clientX - areaTouch.x, e.clientY - areaTouch.y);
+        areaTouch = null;
+        // Treat as a tap if it was quick and the finger didn't move much
+        if (dt < 500 && dist < 12) {
+          const pos = placeFeatherAt(e.clientX, e.clientY);
+          moveCatTo(pos.x, pos.y);
+          triggerPounce();
+        }
+      });
+
+      // Prevent the page from scrolling while playing on mobile
+      area.addEventListener('touchmove', (e) => { e.preventDefault(); }, { passive: false });
 
       function showPurr(catEl) {
         const purr = document.createElement('div');
         purr.className = 'play-purr';
         purr.textContent = 'Purrr~ 💕';
         const rect = catEl.getBoundingClientRect();
-        const areaRect = area.getBoundingClientRect();
-        purr.style.left = (rect.left - areaRect.left + 20) + 'px';
-        purr.style.top  = (rect.top - areaRect.top - 10) + 'px';
+        const r = areaRect();
+        purr.style.left = (rect.left - r.left + 20) + 'px';
+        purr.style.top  = (rect.top - r.top - 10) + 'px';
         area.appendChild(purr);
         setTimeout(() => purr.remove(), 1500);
       }
