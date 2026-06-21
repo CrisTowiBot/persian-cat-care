@@ -1,0 +1,6 @@
+title: Gato Persa — Guía Interactiva
+description: Guía interactiva de cuidados, juego y tips para tu gato persa.
+exclude:
+  - "*.md"
+  - "Makefile"
+  - ".git"
